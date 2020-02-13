@@ -1,0 +1,87 @@
+<template>
+  <div>
+    <table id="tblProducts">
+      <thead>
+        <tr>
+          <td>Balance</td>
+          <td>Jan</td>
+          <td>Feb</td>
+          <td>Mar</td>
+          <td>Apr</td>
+          <td>May</td>
+          <td>Jun</td>
+          <td>Jul</td>
+          <td>Aug</td>
+          <td>Sep</td>
+          <td>Oct</td>
+          <td>Nov</td>
+          <td>Dec</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <input type="text" v-model="no1" @input="expense()" />
+          </td>
+          <td>
+            <input type="text" class="qty" value name="qty" />
+          </td>
+          <td>
+            <input type="text" v-model="no2" @input="expense()" />
+          </td>
+          <td>
+            <input type="text" v-model="no3" @input="expense()" />
+          </td>
+          <td>
+            <input type="text" v-model="no1" @input="expense()" />
+          </td>
+          <td>
+            <input type="text" class="qty" value name="qty" />
+          </td>
+          <td>
+            <input type="text" v-model="no2" @input="expense()" />
+          </td>
+          <td>
+            <input type="text" v-model="no3" @input="expense()" />
+          </td>
+
+          <td>
+            <input type="text" v-model="no1" @input="expense()" />
+          </td>
+          <td>
+            <input type="text" class="qty" value name="qty" />
+          </td>
+          <td>
+            <input type="text" v-model="no2" @input="expense()" />
+          </td>
+          <td>
+            <input type="text" v-model="no3" @input="expense()" />
+          </td>
+
+          <td>
+            <input type="text" v-model="no1" @input="expense()" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style>
+th{
+  color: white;
+  background-color: darkgreen;
+}
+.td{
+  padding: 20px;
+  
+}
+input {
+  width: 40px;
+  margin: 15px;
+}
+</style>
