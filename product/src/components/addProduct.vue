@@ -4,18 +4,18 @@
       <div class="container">
         <h1>Add Product</h1>Product Name
         <br />
-        <input type="text" v-model="item.productName" />
+        <input type="text" v-model="product.productName" />
         <br />
         <br />Price
         <br />
-        <input type="text" v-model="item.productPrice" />
+        <input type="text" v-model="product.productPrice" />
         <br />
         <br />
         <p>
           <button class="btn btn-primary btn-lg" @click="addProduct()">Add &raquo;</button>
         </p>
         <div>
-          <displayProduct :items="data" />
+          <displayProduct ref="child" :product="product" />
         </div>
       </div>
     </div>
@@ -30,21 +30,22 @@ export default {
   },
   data() {
     return {
-      item: {
+      product: {
         productName: "",
         productPrice: ""
       },
-      data: {
-        Name: "",
-        Price: ""
-      }
     };
   },
   methods: {
     addProduct() {
-      this.data.Name = this.item.productName;
-      this.data.Price = this.item.productPrice;
-    }
+      this.$refs.child.childMethod();
+     /*  let data = {
+        Name: this.product.productName,
+        Price: this.product.productPrice
+      };
+      this.item.push(data)
+      console.log(data)
+    */ }
     // this.$refs.child.adddata();
   }
 };

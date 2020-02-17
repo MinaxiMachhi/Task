@@ -10,11 +10,6 @@ const routes = [
     path: '/product',
     name: 'product',
     component: product,displayProduct,
-    children: [{
-      path: '/displayProduct',
-      component: displayProduct,
-      name: displayProduct
-    }]
   },
 ]
 
